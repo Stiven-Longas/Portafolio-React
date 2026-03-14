@@ -28,7 +28,7 @@ export default function Navbar() {
         left: 0,
         right: 0,
         zIndex: 100,
-        padding: "0 40px",
+        padding: window.innerWidth <= 768 ? "0 16px" : "0 30px",
         height: "70px",
         display: "flex",
         alignItems: "center",
@@ -102,9 +102,11 @@ export default function Navbar() {
           border: "1px solid var(--border-bright)",
           color: "var(--cyan)",
           padding: "8px 12px",
-          cursor: "none",
-          fontSize: "16px",
+          cursor: "none", fontSize: "16px",
           display: window.innerWidth <= 768 ? "flex" : "none",
+          alignItems: "center",
+          marginLeft: "auto",
+          flexShrink: 0,
         }}
         className="nav-mobile-btn"
       >

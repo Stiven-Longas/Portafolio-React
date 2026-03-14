@@ -65,8 +65,7 @@ export default function Contacto() {
           <h2 className="section-title">Conta<span>cto</span></h2>
         </motion.div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: "60px", alignItems: "start" }}>
-
+        <div style={{ display: "grid", gridTemplateColumns:  window.innerWidth <= 768 ? "1fr" : "1fr 1.2fr", gap: window.innerWidth <= 768 ? "40px" : "60px", alignItems: "start" }}>
           {/* Info de contacto */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -134,7 +133,7 @@ export default function Contacto() {
           >
             <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
 
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+              <div style={{ display: "grid", gridTemplateColumns: window.innerWidth <= 768 ? "1fr" : "1fr 1fr", gap: "16px" }}>
                 <div>
                   <label style={labelStyle}>Nombre</label>
                   <input

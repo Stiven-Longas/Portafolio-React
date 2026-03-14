@@ -33,7 +33,7 @@ export default function SobreMi() {
           <h2 className="section-title">Sobre <span>Mí</span></h2>
         </motion.div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "60px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: window.innerWidth <= 768 ? "1fr" : "1fr 1fr", gap: window.innerWidth <= 768 ? "40px" : "60px" }}>
 
           {/* Texto + datos */}
           <motion.div
@@ -89,7 +89,7 @@ export default function SobreMi() {
             <div className="section-label" style={{ marginBottom: "20px" }}>Intereses</div>
             <div style={{
               display: "grid",
-              gridTemplateColumns: "repeat(3, 1fr)",
+              gridTemplateColumns: window.innerWidth <= 768 ? "repeat(2, 1fr)" : "repeat(3, 1fr)",
               gap: "12px"
             }}>
               {intereses.map((item, i) => (
