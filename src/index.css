@@ -112,6 +112,36 @@ section { position: relative; z-index: 1; }
 
 .btn-outline:hover { background: rgba(0,245,255,.08); transform: translateY(-2px); }
 
-@media (max-width: 900px) {
-  .section-inner { padding: 70px 24px; }
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .nav-desktop { display: none !important; }
+  .nav-mobile-btn { display: flex !important; }
+
+  /* Hero */
+  #inicio > div > div:first-child {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 40px !important;
+    padding: 0 20px !important;
+  }
+
+  /* Sobre mí, Skills, Curriculum, Contacto — columna */
+  #sobremi .sobremi-grid,
+  #skills .skills-grid,
+  #curriculum .timeline-grid,
+  #contacto .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+
+  /* Intereses — 2 columnas en móvil */
+  .intereses-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Formulario fila */
+  .form-row {
+    grid-template-columns: 1fr !important;
+  }
 }
