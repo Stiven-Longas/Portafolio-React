@@ -104,7 +104,7 @@ export default function Navbar() {
           padding: "8px 12px",
           cursor: "none",
           fontSize: "16px",
-          display: "none",
+          display: window.innerWidth <= 768 ? "flex" : "none",
         }}
         className="nav-mobile-btn"
       >

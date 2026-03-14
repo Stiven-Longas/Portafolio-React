@@ -60,6 +60,9 @@ export default function Hero() {
           maxWidth: "1100px",
           width: "100%",
           zIndex: 1,
+          flexDirection: window.innerWidth <= 768 ? "column" : "row",
+          textAlign: window.innerWidth <= 768 ? "center" : "left",
+          padding: window.innerWidth <= 768 ? "0 20px" : "0",
         }}
       >
         {/* Imagen */}
@@ -82,14 +85,14 @@ export default function Hero() {
             animate={{ rotate: 360 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
             style={{
-                position: "absolute",
-                margin: "auto",
-                inset: 0,
-                width: "320px",
-                height: "320px",
-                border: "1px solid rgba(0,245,255,.12)",
-                borderRadius: "50%",
-                zIndex: 0,
+              position: "absolute",
+              margin: "auto",
+              inset: 0,
+              width: "320px",
+              height: "320px",
+              border: "1px solid rgba(0,245,255,.12)",
+              borderRadius: "50%",
+              zIndex: 0,
             }}
           >
             <div
