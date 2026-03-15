@@ -21,7 +21,7 @@ export default function Contacto() {
     setStatus("loading");
 
     try {
-      await axios.post("http://localhost:4000/api/contacto", form);
+      await axios.post("https://portafolio-backend-production-4f2a.up.railway.app/api/contacto", form);
       setStatus("success");
       setForm({ nombre: "", email: "", asunto: "", mensaje: "" });
       setTimeout(() => setStatus(null), 4000);
