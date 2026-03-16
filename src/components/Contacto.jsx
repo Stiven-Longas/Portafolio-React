@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 const SERVICE_ID  = "service_qzhe1qr";
-const TEMPLATE_ID = "olscyvj";
+const TEMPLATE_ID = "template_olscyvj";
 const PUBLIC_KEY  = "Ys3m5PoWxzuwC2Uox";
 
 const contactItems = [
